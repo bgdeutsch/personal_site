@@ -1,9 +1,6 @@
 {
   "name": "personal_site",
   "version": "1.0.0",
-  "engines": {
-    "npm": "1.6.2"
-  },
   "description": "My personal site",
   "main": "server.js",
   "scripts": {
