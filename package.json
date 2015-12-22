@@ -1,0 +1,19 @@
+{
+  "name": "personal_site",
+  "version": "1.0.0",
+  "description": "My personal site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Deutsch",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "express-flash": "0.0.2",
+    "express-session": "^1.12.1",
+    "path": "^0.12.7"
+  }
+}
