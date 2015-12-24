@@ -2,6 +2,7 @@
 <head>
   <title>Brian Deutsch | Developer</title>
   <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
+  <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' />
   <link rel='stylesheet' type='text/css' href='/public/style.css' />
 </head>
 
@@ -20,24 +21,33 @@
       </nav>
     </header>
 
-  <div id='home' class='panel active'>
-    <h2 class='name'>Brian Deutsch</p>
+  <div id='home' class='page active'>
+    <h2 class='name'>brian <span class='surname'>deutsch</span></h2>
     <h3 class='what'>Full-Stack Web Development + Design</p>
-    <h4 class='where'>Long Island, ny  |  New York City</p>
+    <h4 class='where'>Long Island, NY  |  New York City</p>
+
+    <div class='social'>
+      <ul>
+        <li><a href='https://www.linkedin.com/in/briandeutschdev'><i class="fa fa-linkedin-square"></i></a></li>
+        <li><a href='http://www.github.com/bgdeutsch'><i class="fa fa-github-square"></i></a></li>
+        <li><a href='http://www.twitter.com/bdutchy'><i class="fa fa-twitter-square"></i></a></li>
+    </div>
   </div>
 
-  <div id='work' class='panel'>
-    <a href='http://'
+  <div id='work' class='page'>
+    <div class='project' id='lebron'><a href='http://lebrononskates.herokuapp.com/'><p>Lebron on Skates</p></a></div>
+    <div class='project' id='myhomepage'><a href='http://my-home-page.herokuapp.com/'><p>My Task List</p></a></div></br>
+    <p class='clear'>Note: more projects will be added soon - feel free to view code samples on <a href='http://www.github.com/bgdeutsch'><b>Github</b></a> in the meantime.</p>
   </div>
 
-  <div id='skills' class='panel'>
+  <div id='skills' class='page'>
     <div class='skill'><h1>Languages</h1><p>HTML5, CSS3, Ruby, JavaScript</p></div>
     <div class='skill'><h1>Frameworks</h1><p>jQuery, Rails, AngularJS, NodeJS, ExpressJS, ReactJS, Sass, Bootstrap</p></div>
     <div class='skill'><h1>Databases</h1><p>SQL, PostgresQL, MongoDB</p></div>
     <div class='skill'><h1>Other</h1><p>Responsive Design, Git, MVC, SEO</p></div>
   </div>
 
-  <div id='about' class='panel'>
+  <div id='about' class='page'>
     <div class='outer_circle'>
       <div class='circle_logo'></div>
     </div>
@@ -46,15 +56,16 @@
     </div>
   </div>
 
-    <div id='contact' class='panel'>
-      <h3 class='contact'>Get in contact with me!</h3>
+    <div id='contact' class='page'>
       <p class='available'>I am currently available for new projects.  I also love to chat, drop me a line!</p></br></br>
 
+
        <form action='/form' method='POST' id='contact_form'>
-         <input type='text' class='input' name='username' placeholder='Your name' /><br>
-         <input type='text' class='input' name='email' placeholder='E-mail' /><br>
-         <input type='text' class='input' name='message' placeholder='Your message here...' id='area' /></br>
-         <input type='submit' class='submit' name='submit' placeholder='Submit' /></br>
+         <div class='error'></div>
+         <input type='text' class='input' name='username' data-rel='username' placeholder='Your name' /><br>
+         <input type='email' class='input' name='email' data-rel='email' placeholder='E-mail' /><br>
+         <input type='text' class='input' name='message' data-rel='message' placeholder='Your message here...' id='area' /></br>
+         <input type='submit' class='submit' name='submit' placeholder='Submit' />&nbsp;&nbsp;
 
        <small style='color: white;'>Note: You'll be redirected automatically.  Thanks for the message :-)</small>
        </form>

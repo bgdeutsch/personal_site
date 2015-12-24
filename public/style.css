@@ -1,25 +1,24 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,900,100);
 
-
 *{
   box-sizing: border-box;
 }
 
-
 body{
   background-image: url('stardust1.png');
   font-family: 'Roboto', sans-serif;
-  text-transform: lowercase;
 }
 
-
+a, a:visited{
+  color: #d3e1e4;
+  text-decoration: none;
+}
 
 header{
   height: 200px;
   width: 100%;
   text-align: center;
 }
-
 
 nav{
   border: solid 2px rgba(0, 0, 0, 0);
@@ -36,23 +35,22 @@ nav{
 }
 
 .nav-bar{
-   margin-top: 47px;
-   margin-right: 357px;
+  margin-top: 47px;
+  margin-right: 357px;
 }
 
-
 .logo{
-    float: left;
-    text-transform: lowercase;
-    font-size: 110px;
-    opacity: 0.7;
-    font-weight: 900;
-    letter-spacing: -8px;
-    margin-top: -35px;
+  float: left;
+  text-transform: lowercase;
+  font-size: 110px;
+  opacity: 0.7;
+  font-weight: 900;
+  letter-spacing: -20px;
+  margin-top: -35px;
 }
 
 .logo#d{
-    color: #d3e1e4;
+  color: #d3e1e4;
 }
 
 .outer_circle{
@@ -78,40 +76,99 @@ blockquote{
   margin-left: 267px;
 }
 
-.project_display {
-   width:70%;
-   height:150px;
-   margin:10px;
-   border: 1px pink solid;
-   border-radius: 7px;
-}
-
 #work{
   position: relative;
 }
 
-.lebron{
-  border: 1px solid green;
-  width: 35%;
-  position: absolute;
-  height: 200px;
-  margin-top: -8px;
-  border-radius: 7px;
-  margin-left: 14px;
-  position: absolute;
-  background-image: url('/public/lebron.png');
-  background-size: cover;
+#lebron{
+  position: relative;
+  background: none;
+  overflow: hidden;
 }
 
+#lebron:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: url('/public/lebron.png');
+  background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
 
+#lebron:hover:before{
+  opacity: 1;
+}
 
+#myhomepage{
+  position: relative;
+  background: none;
+  overflow: hidden;
+}
 
+#myhomepage:before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+  background-image: url('/public/myhomepage.png');
+  background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+}
 
+#myhomepage:hover:before{
+  opacity: 1;
+}
 
+.project{
+  box-shadow: 0 0 8px rgba(250, 250, 250, .4);
+  background-color: rgba(250, 250, 250, .4);
+  border-radius: 3px;
+  width: 36%;
+  height: 225px;
+  overflow: hidden;
+  position: relative;
+  margin: 30px;
+  margin-left: 16px;
+  float: left;
+}
 
+.project p{
+  color: white;
+  text-align: center;
+  font-weight: 100;
+  font-size: 50px;
+  margin-top: 18%;
+}
 
+.project:hover p{
+  visibility: hidden;
+}
 
+.project a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
 
+.clear{
+  clear: both;
+  color: #f4e9c7;
+  font-size: 20px;
+  padding: 15px;
+  font-weight: 100;
+}
 
 
 #about{
@@ -128,15 +185,13 @@ blockquote{
   background-image: url('/public/Untitled-1.jpg');
   background-repeat: no-repeat;
   box-shadow: 0 0 8px rgba(250, 250, 250, .8);
-  -webkit-box-shadow: rgba(78, 231, 187, .4);
-  -moz-box-shadow: rgba(78, 231, 187, .4);
+  -webkit-box-shadow: 0 0 8px rgba(250, 250, 250, .8);
+  -moz-box-shadow: 0 0 8px rgba(250, 250, 250, .8);
   z-index: 0;
   position: absolute;
   margin-left: 10px;
   margin-top: 10px;
 }
-
-
 
 .container{
   max-width: 1200px;
@@ -148,7 +203,7 @@ li{
   display: inline;
   padding: 12px;
   color: #d3e1e4;
-  text-transform: lowercase;
+  /*text-transform: lowercase;*/
 }
 
 li:hover{
@@ -196,65 +251,46 @@ input{
   border: 2px solid #4ee7bb;
   border-radius: 3px;
 }
+
 .available{
   line-height: 0.1;
   color: #f4e9c7;
-  margin-top: -31px;
+  margin-top: -10px;
   opacity: 0.8;
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
-.panel{
+.page{
   height:400px;
   width:85%;
-  border: 3px dashed purple;
   display: none;
   margin: 0 auto;
   margin-left: 81px;
   margin-top: -42px;
 }
 
-.panel.active{
+.page.active{
   display:block;
-}
-
-.projects{
-  width: 275px;
-  height:300px;
-  border:3px solid #2f2f2f;
-  float: left;
-  overflow: hidden;
-  position: relative;
-}
-
-
-#forum{
-  background:url('./img/lebron_forum.png') no-repeat;
-  opacity: 1;
-  background-size:cover;
-  background-position:-30px 0px;
-  height:275px;
-  width:275px;
-  border-radius:50%;
-  overflow:hidden;
-  margin:auto;
 }
 
 #home{
   padding: 10px;
   text-align: left;
   line-height: 0.25;
-  text-transform: lowercase;
   margin-top: -50px;
   letter-spacing: 2px;
+  position: relative;
 }
+
+
 .skill{
   line-height: 0.4;
   padding: 10px;
 }
+
 #skills{
-  margin-top: -60px;
+  margin-top: -69px;
   margin-left: 81px;
 }
 
@@ -273,8 +309,9 @@ input{
   font-weight: 100;
 }
 
-
-
+.skill{
+  padding-bottom: 12px;
+}
 
 .name{
   font-weight: 900;
@@ -282,25 +319,44 @@ input{
   color:#4ee7bb;
   opacity: 0.7;
   letter-spacing: 8px;
+  margin-top: 50px;
 }
 
-svg{
-  font-weight:400;
-  font-size:30px;
-	text-shadow: 0 1px 2px rgba(0,0,0,.5);
+.surname{
+  font-weight: 900;
+  font-size: 88px;
+  color:#d3e1e4;
+  opacity: 0.7;
+  letter-spacing: 18px;
 }
 
 .what{
-
   font-size: 35px;
   color: #d3e1e4;
   font-weight:100;
 }
 
-
 .where{
-
   font-size: 35px;
   color: #f4e9c7;
   font-weight:100;
+}
+
+.error{
+  width: 25%;
+  height: 45px;
+  visibility: hidden;
+  color: red;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  margin-top: -55px;
+  padding: 3px;
+}
+
+.social{
+  position: absolute;
+  margin-top: 85px;
+  margin-left: -50px;
+  font-size: 30px;
 }
