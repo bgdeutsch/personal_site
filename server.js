@@ -1,21 +1,16 @@
 var express = require('express');
 var path = require('path');
-var fs = require('fs');
 var app = new express();
-var validator = require("validator");
 var bodyParser = require('body-parser');
-
-
+var sendgrid  = require('sendgrid')('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');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 var server = app.listen(process.env.PORT || 3000);
+console.log('The server is now listening on port 3000.');
 
 app.use('/public', express.static(__dirname + '/public'));
-
-console.log('The server is now listening on port 3000.');
 
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname+'/public/index.html'));
@@ -27,11 +22,13 @@ app.post('/form', function(req, res){
   var message = req.body.message;
   var user_info = 'Name:' + ' ' + username + '   ' + 'Email:' + ' ' + email + '   ' + 'Message:' + ' ' +message
 
-  fs.appendFile('message.txt', user_info+'\n', function (err) {
-  if(err){
-    return res.send('err');
-  }
-    return res.redirect('/');
-
+  sendgrid.send({
+    to:       'bgdeutsch@gmail.com',
+    from:     'noreply@briandeutsch.com',
+    subject:  'I have a message for you!',
+    text:     user_info
+    }, function(err, json) {
+      if (err) { return console.log(err); }
+      res.redirect('/');
+    });
   });
-});
