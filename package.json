@@ -12,6 +12,6 @@
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
     "path": "^0.12.7",
-    "sendgrid": "^2.0.0",
+    "sendgrid": "^2.0.0"
   }
 }
