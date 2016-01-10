@@ -15,6 +15,7 @@ a, a:visited{
 }
 
 header{
+  margin-top: -0.7em;
   height: 200px;
   width: 100%;
   text-align: center;
@@ -35,8 +36,8 @@ nav{
 }
 
 .nav-bar{
-  margin-top: 47px;
-  margin-right: 357px;
+  margin-top: 48px;
+  margin-right: 254px;
 }
 
 .logo{
@@ -72,7 +73,7 @@ blockquote{
 }
 
 .about_me_paragraph{
-  width: 42%;
+  width: 51%;
   margin-left: 267px;
 }
 
@@ -170,7 +171,6 @@ blockquote{
   font-weight: 100;
 }
 
-
 #about{
   margin-left: 63px;
   margin-top: -23px;
@@ -196,14 +196,14 @@ blockquote{
 .container{
   max-width: 1200px;
   margin: 0 auto;
+  z-index: -1;
 }
 
-li{
+.nav-bar li{
   list-style-type: none;
   display: inline;
-  padding: 12px;
+  padding-left: 40px;
   color: #d3e1e4;
-  /*text-transform: lowercase;*/
 }
 
 li:hover{
@@ -281,8 +281,8 @@ input{
   margin-top: -50px;
   letter-spacing: 2px;
   position: relative;
+  z-index: -1;
 }
-
 
 .skill{
   line-height: 0.4;
@@ -360,3 +360,307 @@ input{
   margin-left: -50px;
   font-size: 30px;
 }
+
+.fa.fa-bars.fa-2x{
+  display: none;
+  cursor: pointer;
+}
+
+.dropdown{
+  width: 365px;
+  height: 150px;
+  background-color: #E8E8E8;
+  z-index: 1;
+  margin-top: -5.7em;
+  margin-left: 54px;
+  border-radius: 3px;
+  position: relative;
+  text-align: center;
+  font-size: 22px;
+  display: none;
+}
+
+.row{
+  border-bottom: 1px solid #333;
+  width: auto;
+  margin-left: -40px;
+}
+
+.dropdown-nav{
+  line-height: 1.35;
+  list-style-type: none;
+}
+
+.dropdown-nav li:hover{
+  background-color: rgba(78, 231, 187, 0.5);
+  color: white;
+}
+
+.show {display:block;}
+
+.social ul {
+  list-style-type: none;
+  display: inline-flex;
+  margin-left: -8px;
+}
+
+.social li {
+  padding: 0.8em;
+}
+
+/***************************
+****************************
+MEDIA QUERIES
+****************************
+***************************/
+
+@media screen and (max-width: 1130px) {
+  .nav-bar{
+    margin-right: 189px;
+    margin-top: 48px;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .nav-bar{
+    margin-right: 93px;
+    margin-top: 48px;
+  }
+
+  .what, .where, .name { margin-left: -10px; }
+
+  #contact p{
+    font-size: 19px;
+    letter-spacing: 0px;
+  }
+
+  #home{margin-left:69px;}
+}
+
+@media screen and (max-width: 881px) {
+  .nav-bar{
+    margin-right: 5px;
+    margin-top: 48px;
+  }
+
+  .name{
+    font-size: 85px;
+    letter-spacing: 4px;
+    margin-left: -17px;
+  }
+
+  .what, .where{
+    margin-left: -17px;
+  }
+
+  .social{ margin-left:-68px;}
+
+  #home{ margin-left:76px;}
+
+}
+
+@media screen and (max-width: 810px) {
+  .name{
+    letter-spacing: 2px;
+    margin-left: -26px;
+  }
+
+  .surname{
+    letter-spacing: 14px;
+    font-size: 85px;
+  }
+  .what, .where{ margin-left: -26px;}
+
+  #skills{
+    margin-left: 54px;
+  }
+
+  #skills h1{
+    font-size: 39px;
+    letter-spacing: 4px;
+  }
+
+  #skills p{
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+
+  #about{ margin-top:-45px;}
+
+  .about_me_paragraph{
+    width:80%;
+    clear:both;
+    margin-left:67px;
+    padding-top: 4px;
+  }
+
+  .outer_circle{
+    margin-left:197px;
+  }
+
+}
+
+
+@media screen and (max-width: 754px) {
+  .nav-bar{
+    font-size: 18px;
+    letter-spacing: -1px;
+    margin-right: -50px;
+    margin-top: 50px;
+  }
+
+  .name, .surname{
+    font-size: 70px;
+  }
+
+  .what, .where{
+    font-size: 30px;
+  }
+
+  #contact{
+    margin-left: 62px;
+  }
+
+  #contact p{
+    font-size: 15px;
+  }
+
+}
+
+@media screen and (max-width: 667px) {
+  .nav-bar{ display: none; }
+
+  .fa.fa-bars.fa-2x{
+    display: block;
+    margin-top: 33px;
+    position: relative;
+    margin-right: -120px;
+  }
+
+  .name, .surname{
+    font-size: 65px;
+  }
+
+  .surname{
+    letter-spacing: 11px;
+  }
+
+  .what, .where{
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+
+  #home{
+    margin-left: 62px;
+  }
+
+  .logo{
+    font-size: 100px;
+    margin-top: -24px;
+  }
+
+  .social ul{
+    margin-left: -11px;
+    font-size: 24px;
+  }
+
+  #skills{ margin-left:43px;}
+
+  #skills h1{
+    font-size: 34px;
+    letter-spacing: 3px;
+  }
+
+  #skills p{
+    font-size: 17px;
+    letter-spacing: 0px;
+  }
+
+  .outer_circle{
+    margin-left: 60px;
+  }
+
+  .about_me_paragraph{
+    margin-left: -4px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .name, .surname{
+    font-size: 55px;
+  }
+
+  .surname{
+    letter-spacing: 7px;
+  }
+
+  .what, .where{
+    font-size: 24px;
+    letter-spacing: 0px;
+  }
+
+  #home{
+    margin-left: 62px;
+  }
+
+  .dropdown.show{
+    font-size: 18px;
+    height: 125px;
+    margin-top: -123px;
+  }
+
+  #skills{ margin-left: 32px;}
+
+  #skills h1{
+    font-size: 25px;
+  }
+
+  #skills p{
+    font-size:14px;
+  }
+
+  #contact{margin-left: 50px;}
+
+  #contact p{
+    font-size:13px;
+  }
+
+}
+
+@media screen and (max-width: 464px) {
+  .name, .surname{
+    font-size: 45px;
+  }
+
+  .surname{
+    letter-spacing: 3px;
+  }
+
+  .what, .where{
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+
+  .logo{
+    font-size: 87px;
+    margin-top: -12px;
+  }
+
+  .dropdown.show{
+    font-size: 16px;
+    height: 110px;
+    margin-left: 42px;
+    width: 300px;
+  }
+
+  #home{
+    margin-left: 55px;
+  }
+
+  #skills{ margin-left: 27px;}
+
+  #skills h1{ font-size: 23px;}
+
+  #skills p{font-size:13px;}
+  
+  .outer_circle{ margin-left: 16px;}

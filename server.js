@@ -8,7 +8,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var server = app.listen(process.env.PORT || 3000);
-console.log('The server is now listening on port 3000.');
 
 app.use('/public', express.static(__dirname + '/public'));
 
@@ -20,15 +19,15 @@ app.post('/form', function(req, res){
   var username = req.body.username;
   var email = req.body.email;
   var message = req.body.message;
-  var user_info = 'Name:' + ' ' + username + '   ' + 'Email:' + ' ' + email + '   ' + 'Message:' + ' ' +message
+  var user_info = 'Name:' + ' ' + username + '    ' + 'Email:' + ' ' + email + '    ' + 'Message:' + ' ' +message
 
   sendgrid.send({
     to:       'bgdeutsch@gmail.com',
     from:     'noreply@briandeutsch.com',
     subject:  'I have a message for you!',
     text:     user_info
-    }, function(err, json) {
-      if (err) { return console.log(err); }
-      res.redirect('/');
-    });
+  }, function(err, json) {
+    if (err) { return res.send('Oops! Something has gone wrong.'); }
+    res.redirect('/');
   });
+});
