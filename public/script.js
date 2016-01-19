@@ -1,8 +1,20 @@
 $(document).ready(function(){
 
+  //Google Analytics
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72601012-1', 'auto');
+  ga('send', 'pageview');
+
+  // End Google script.
+
   $('li').click(function() {
-      var content = $(this).attr('rel');
-      $('.page.active').fadeOut(1000, nextPage);
+    var content = $(this).attr('rel');
+    $('.page.active').fadeOut(1000, nextPage);
 
     function nextPage(){
       $(this).removeClass('active');
@@ -12,7 +24,6 @@ $(document).ready(function(){
     };
   });
 
-
   $('.fa.fa-bars.fa-2x').click(function(e){
     $('.dropdown').toggleClass('show');
   });
@@ -20,8 +31,6 @@ $(document).ready(function(){
   $('.row').click(function(e){
     $('.dropdown').toggleClass('show');
   });
-
-
 
   // Form validations should generally be done server-side,
   // in case user's browser has jS turned off.  Re-factoring coming soon.
