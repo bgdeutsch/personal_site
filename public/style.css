@@ -220,6 +220,7 @@ li:hover{
   width: 250px;
   height: 200px;
   margin-top: 11px;
+  word-wrap: break-word;
 }
 
 .input{
@@ -691,10 +692,10 @@ MEDIA QUERIES
   /*Samsung Galaxy S5, LG Nexus 5, HTC One*/
   @media screen and (max-width: 360px){
     .name, .surname{
-      font-size: 37px;
+      font-size: 45px;
     }
     .what, .where{
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1;
     }
     #home{
@@ -711,8 +712,12 @@ MEDIA QUERIES
     #skills{
       margin-left:21px;
     }
+    #skills h1{
+      font-size: 26px;
+    }
     #skills p{
-      font-size: 10px;
+      font-size: 17px;
+      line-height: 1.5;
     }
     #about{
       margin-left: 36px;
@@ -730,9 +735,10 @@ MEDIA QUERIES
     }
     #contact{
       margin-left: 31px;
+      margin-top: -86px;
     }
     #contact p{
-      font-size: 12px;
+      display: none;
     }
     .project{
       width: 180px;
@@ -757,11 +763,18 @@ MEDIA QUERIES
       letter-spacing: 1px;
       line-height: 1.5;
     }
+    #skills h1{
+      font-size: 22px;
+    }
     .social{
       margin-top: 78px;
     }
-    .name{
+    .name, .surname{
       margin-top: 22px;
+      font-size: 39px;
+    }
+    .what, .where{
+      font-size: 16px;
     }
     .fa.fa-bars.fa-2x {
       margin-right: -200px;
@@ -793,4 +806,8 @@ MEDIA QUERIES
       font-size: 16px;
       margin-left: -90px;
     }
+    .dropdown.show {
+      margin-left: 28px;
+      width: 279px;
   }
+}
