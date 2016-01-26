@@ -30,15 +30,16 @@ nav{
   height: 100px;
   position: relative;
   color: #4ee7bb;
-  margin-top: 85px;
+  margin-top: 41px;
   font-size: 20px;
   opacity: 0.8;
   font-weight: 400;
 }
 
 .nav-bar{
-  margin-top: 48px;
+  margin-top: 47px;
   margin-right: 254px;
+  width: 125%;
 }
 
 .logo{
@@ -60,7 +61,7 @@ nav{
   height: 240px;
   border-radius: 150px;
   -webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
+  -moz-border-radius: 150px;
   z-index: -1;
   background-color: rgba(78, 231, 187, .5);
   position: relative;
@@ -80,89 +81,70 @@ blockquote{
 
 #work{
   position: relative;
-}
-
-#lebron{
-  position: relative;
-  background: none;
-  overflow: hidden;
-}
-
-#lebron:before{
-  content: '';
-  position: absolute;
+  margin-left: 57px;
   width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.2;
-  background-image: url('/public/lebron.png');
-  background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-}
-
-#lebron:hover:before{
-  opacity: 1;
-}
-
-#myhomepage{
-  position: relative;
-  background: none;
-  overflow: hidden;
-}
-
-#myhomepage:before{
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.2;
-  background-image: url('/public/myhomepage.png');
-  background-size: cover;
-  -ms-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  -webkit-background-size: cover;
-}
-
-#myhomepage:hover:before{
-  opacity: 1;
 }
 
 .project{
-  box-shadow: 0 0 8px rgba(250, 250, 250, .4);
-  background-color: rgba(250, 250, 250, .4);
-  border-radius: 3px;
-  width: 36%;
-  height: 225px;
-  overflow: hidden;
-  position: relative;
-  margin: 30px;
-  margin-left: 16px;
-  float: left;
+  width:  240px;
+  height: 200px;
+  margin: 55px;
+  float:  left;
+  color:  #333;
+  font-weight: 400;
+  font-size:   24px;
 }
 
-.project p{
-  color: white;
-  text-align: center;
-  font-weight: 100;
-  font-size: 50px;
-  margin-top: 18%;
-}
-
-.project:hover p{
-  visibility: hidden;
-}
-
-.project a{
+.project > .project_front{
   position: absolute;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 2px 2px 2px rgba(78, 231, 187, 0.5);
+  width: 310px;
+  height: 200px;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
 }
+
+.project > .project_reverse{
+  position: absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background: #4ee7bb;
+  width: 310px;
+  height: 200px;
+  border-radius: 3px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+  box-shadow: 2px 2px 2px rgba(241, 241, 241, 0.5);
+  padding: 3px;
+}
+
+.project:hover > .project_front{
+  transform: perspective(600px) rotateY(-180deg);
+  cursor: pointer;
+}
+
+.project:hover > .project_reverse{
+  transform: perspective(600px) rotateY(0deg);
+  cursor: pointer;
+}
+
+.project_notes{
+  margin-left: -115px;
+}
+
+#lebron{
+  background-image: url('/public/lebron.png');
+}
+
+#web_audio{
+  background-image: url('/public/web_audio.png');
+}
+
+#angular{
+  background-image: url('/public/movie.png');
+}
+
 
 .clear{
   clear: both;
@@ -170,11 +152,18 @@ blockquote{
   font-size: 20px;
   padding: 15px;
   font-weight: 100;
+  text-align: center;
+}
+
+.clear:first-of-type{
+  color: #d3e1e4;
+  font-weight: 400;
 }
 
 #about{
-  margin-left: 63px;
-  margin-top: -23px;
+  margin-left: 163px;
+  margin-top: -15px;
+  width: 115%;
 }
 
 .circle_logo{
@@ -195,7 +184,7 @@ blockquote{
 }
 
 .container{
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   z-index: -1;
 }
@@ -203,12 +192,21 @@ blockquote{
 .nav-bar li{
   list-style-type: none;
   display: inline;
-  padding-left: 40px;
+  margin-left: 3em;
   color: #d3e1e4;
+  font-weight: 100;
+  font-size: 26px;
 }
 
-li:hover{
+.nav-bar li:hover{
   cursor: pointer;
+  font-weight: 400;
+  border-bottom: 5px solid #4ee7bb;
+}
+
+#contact{
+  margin-left: 100px;
+  margin-top: 1px;
 }
 
 #contact_form{
@@ -217,14 +215,20 @@ li:hover{
 }
 
 #area{
-  width: 250px;
-  height: 200px;
+  width: 300px;
+  height: 180px;
   margin-top: 11px;
   word-wrap: break-word;
 }
 
 .input{
-  width: 250px;
+  width: 300px;
+  border: 2px solid #4ee7bb;
+  border-radius: 3px;
+  background: none;
+  color: #d3e1e4;
+  padding: 6px;
+  font-size: 18px;
 }
 
 .submit{
@@ -277,13 +281,33 @@ input{
 }
 
 #home{
-  padding: 10px;
-  text-align: left;
-  line-height: 0.25;
-  margin-top: -50px;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: -60px;
   letter-spacing: 2px;
   position: relative;
   z-index: -1;
+  width: 85%;
+}
+
+.highlight{
+  color: #4ee7bb;
+}
+
+.highlight:last-child{
+  color: #4ED5E7;
+}
+
+.highlight:nth-child(2){
+  color: #E74E7A;
+}
+
+.highlight:nth-child(3){
+  color: #6F4EE7;
+}
+
+.highlight:nth-child(4){
+  color: #E7C34E;
 }
 
 .skill{
@@ -316,32 +340,13 @@ input{
 }
 
 .name{
-  font-weight: 900;
-  font-size: 88px;
-  color:#4ee7bb;
+  font-weight: 100;
+  font-size: 50px;
   opacity: 0.7;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
   margin-top: 50px;
-}
-
-.surname{
-  font-weight: 900;
-  font-size: 88px;
-  color:#d3e1e4;
-  opacity: 0.7;
-  letter-spacing: 18px;
-}
-
-.what{
-  font-size: 35px;
   color: #d3e1e4;
-  font-weight:100;
-}
-
-.where{
-  font-size: 35px;
-  color: #f4e9c7;
-  font-weight:100;
+  margin-right: -25px;
 }
 
 .error{
@@ -358,9 +363,10 @@ input{
 
 .social{
   position: absolute;
-  margin-top: 85px;
-  margin-left: -50px;
+  margin-top: 40px;
+  margin-left: -14px;
   font-size: 30px;
+  width: 100%;
 }
 
 .fa.fa-bars.fa-2x{
@@ -387,9 +393,6 @@ input{
   width: auto;
   margin-left: -40px;
 }
-
-
-
 
 .dropdown-nav{
   line-height: 1.55;
@@ -809,5 +812,5 @@ MEDIA QUERIES
     .dropdown.show {
       margin-left: 28px;
       width: 279px;
+    }
   }
-}
