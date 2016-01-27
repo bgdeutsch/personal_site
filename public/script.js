@@ -31,6 +31,20 @@ $(document).ready(function(){
   $('.row').click(function(e){
     $('.dropdown').toggleClass('show');
   });
+  //Stop propagation allows menu to remain down when clicked,
+  //Then close it when user clicks out of menu.
+  // $('#burger').click(function(e){
+  //   $('.dropdown-nav').slideToggle(700);
+  //   e.stopPropagation();
+  // });
+  //
+  // $('html').click(function(){
+  //   $('.dropdown-nav').slideUp(700);
+  // });
+  //
+  // $('.row').click(function(){
+  //   $('.dropdown-nav').toggleClass('show');
+  // });
 
   // Form validations should generally be done server-side,
   // in case user's browser has jS turned off.  Re-factoring coming soon.

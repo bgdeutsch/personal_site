@@ -77,6 +77,7 @@ blockquote{
 .about_me_paragraph{
   width: 51%;
   margin-left: 267px;
+  float: left;
 }
 
 #work{
@@ -267,6 +268,12 @@ input{
   letter-spacing: 1px;
 }
 
+#contact small{
+  color: white;
+  float: left;
+  line-height: 2em;
+}
+
 .page{
   height:400px;
   width:85%;
@@ -371,6 +378,9 @@ input{
 
 .fa.fa-bars.fa-2x{
   display: none;
+}
+
+.fa.fa-bars.fa-2x:hover{
   cursor: pointer;
 }
 
@@ -423,394 +433,212 @@ MEDIA QUERIES
 ****************************
 ***************************/
 
-@media screen and (max-width: 1130px) {
-  .nav-bar{
-    margin-right: 189px;
-    margin-top: 48px;
+@media screen and (max-width: 1060px){
+  .nav-bar li{
+    font-size: 24px;
+    margin-left: 2em;
   }
 }
 
-@media screen and (max-width: 995px) {
-  .nav-bar{
-    margin-right: 93px;
-    margin-top: 48px;
+@media screen and (max-width: 1012px){
+  .social{
+    margin-top: -1px;
   }
 
-  .what, .where, .name { margin-left: -10px; }
-
-  #contact p{
-    font-size: 19px;
-    letter-spacing: 0px;
+  #home{
+    margin-top: -70px;
+    margin-left: 52px;
+    font-size: 48px;
   }
-
-  #home{margin-left:69px;}
 }
 
-@media screen and (max-width: 881px) {
-  .nav-bar{
-    margin-right: 5px;
-    margin-top: 48px;
+@media screen and (max-width: 860px){
+  .nav-bar li {
+    font-size: 22px;
+    margin-left: 1.8em;
+  }
+
+  .nav-bar {
+    margin-top: 49px;
+    margin-right: 254px;
+    width: 120%;
   }
 
   .name{
-    font-size: 85px;
-    letter-spacing: 4px;
-    margin-left: -17px;
+    font-size: 45px;
+    margin-top: 47px;
   }
-
-  .what, .where{
-    margin-left: -17px;
-  }
-
-  .social{ margin-left:-68px;}
-
-  #home{ margin-left:76px;}
-
 }
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 768px){
   .name{
-    letter-spacing: 2px;
-    margin-left: -26px;
+    font-size: 41px;
   }
-
-  .surname{
-    letter-spacing: 14px;
-    font-size: 85px;
-  }
-  .what, .where{ margin-left: -26px;}
-
-  #skills{
-    margin-left: 54px;
-  }
-
-  #skills h1{
-    font-size: 39px;
-    letter-spacing: 4px;
-  }
-
-  #skills p{
-    font-size: 20px;
-    letter-spacing: 0px;
-  }
-
-  #about{ margin-top:-45px;}
-
-  .about_me_paragraph{
-    width:80%;
-    clear:both;
-    margin-left:67px;
-    padding-top: 4px;
-  }
-
-  .outer_circle{
-    margin-left:197px;
-  }
-
-}
-
-
-@media screen and (max-width: 754px) {
-  .nav-bar{
-    font-size: 18px;
-    letter-spacing: -1px;
-    margin-right: -50px;
+  .social{
     margin-top: 50px;
   }
-
-  .name, .surname{
-    font-size: 70px;
-  }
-
-  .what, .where{
-    font-size: 30px;
-  }
-
-  #contact{
-    margin-left: 62px;
-  }
-
-  #contact p{
-    font-size: 15px;
-  }
-
 }
 
-@media screen and (max-width: 667px) {
+@media screen and (max-width: 710px){
   .nav-bar{ display: none; }
 
-  .fa.fa-bars.fa-2x{
+  #burger{
     display: block;
-    margin-top: 37px;
+    margin-top: 35px;
     position: relative;
-    margin-right: -259px;
+    margin-right: -11em;
   }
 
-  .name, .surname{
-    font-size: 65px;
+  .dropdown.show{
+    width: 575px;
+    margin-left: 59px;
   }
 
-  .surname{
-    letter-spacing: 11px;
+  .name{
+    font-size: 39px;
+    margin-left: -12px;
+  }
+}
+
+@media screen and (max-width: 665px){
+  #logo{
+    margin-left: -25px;
   }
 
-  .what, .where{
-    font-size: 28px;
-    letter-spacing: 1px;
+  #burger{ margin-right: -12em; }
+
+  .dropdown.show{
+    width: 585px;
+    margin-left: 33px;
   }
+}
 
-  #home{
-    margin-left: 62px;
-  }
-
-  .logo{
-    font-size: 100px;
-    margin-top: -24px;
-  }
-
-  .social ul{
-    margin-left: -11px;
-    font-size: 24px;
-  }
-
-  #skills{ margin-left:43px;}
-
-  #skills h1{
+@media screen and (max-width: 570px){
+  .name{
     font-size: 34px;
-    letter-spacing: 3px;
+    margin-left: -32px;
   }
 
-  #skills p{
-    font-size: 17px;
-    letter-spacing: 0px;
+  #burger{ margin-right: -11em; }
+
+  .social{
+    margin-top: 80px;
+    margin-left: -27px;
   }
 
-  .outer_circle{
-    margin-left: 60px;
-  }
+  #logo{ margin-left: -38px; }
 
-  .about_me_paragraph{
-    margin-left: -4px;
+  .dropdown.show{
+    margin-left: 13px;
+    width: 535px;
   }
 }
 
-@media screen and (max-width: 575px) {
-  .name, .surname{
-    font-size: 55px;
-  }
-
-  .surname{
-    letter-spacing: 7px;
-  }
-
-  .what, .where{
-    font-size: 24px;
-    letter-spacing: 0px;
-  }
-
-  #home{
-    margin-left: 62px;
-  }
+@media screen and (max-width: 525px){
+  #burger{ margin-right: -10em; }
 
   .dropdown.show{
-    font-size: 18px;
-    height: 125px;
-    margin-top: -123px;
+    width: 500px;
+    margin-left: 7px;
   }
-
-  #skills{ margin-left: 32px;}
-
-  #skills h1{
-    font-size: 25px;
-  }
-
-  #skills p{
-    font-size:14px;
-  }
-
-  #contact{margin-left: 50px;}
-
-  #contact p{
-    font-size:13px;
-  }
-
-  .dropdown.show{
-    font-size: 18px;
-    height: 139px;
-    margin-top: -123px;
-    width: 400px;
-  }
-
 }
 
-@media screen and (max-width: 464px) {
-  .name, .surname{
-    font-size: 45px;
+@media screen and (max-width: 455px){
+  .name{
+    font-size: 29px;
+    margin-left: -56px;
   }
 
-  .surname{
-    letter-spacing: 3px;
-  }
+  #burger{ margin-right: -8em; }
 
-  .what, .where{
-    font-size: 20px;
-    letter-spacing: 0px;
-  }
+  .social{ margin-left: -36px; }
 
-  .logo{
-    font-size: 87px;
-    margin-top: -12px;
-  }
+  #logo{ margin-left: -30px; }
 
   .dropdown.show{
-    font-size: 16px;
-    height: 110px;
-    margin-left: 42px;
-    width: 300px;
+    margin-left: 11px;
+    width: 421px;
   }
+}
 
-  #home{
-    margin-left: 55px;
-  }
+/* ----------- iPhone 6 ----------- */
 
-  #skills{ margin-left: 27px;}
-
-  #skills h1{ font-size: 23px;}
-
-  #skills p{font-size:13px;}
-
-  .outer_circle{ margin-left: 16px;}
-
-  .dropdown.show{
-    font-size: 16px;
-    height: 123px;
-    margin-left: 42px;
-    width: 336px;
-  }
-
-  .fa.fa-bars.fa-2x{
-    margin-right: -160px;
-  }
-
-  /*Samsung Galaxy S5, LG Nexus 5, HTC One*/
-  @media screen and (max-width: 360px){
-    .name, .surname{
-      font-size: 45px;
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo{
+      font-size: 100px;
     }
-    .what, .where{
-      font-size: 18px;
-      line-height: 1;
+
+    #burger{
+      margin-right: -6.5em;
+      margin-top: 24px;
     }
-    #home{
-      margin-left:47px;
-      margin-top: -25px;
-    }
-    .social{
-      margin-top:120px;
-    }
+
     .dropdown.show{
-      margin-left: 33px;
-      width: 306px;
+      margin-left: 5px;
+      width: 362px;
+      margin-top: -138px;
     }
+
+    #home{ width: 81%; }
+
+    .social{ margin-top: 61px; }
+
+    .project{
+      margin: 44px;
+      margin-left: -29px;
+      margin-top: -20px;
+    }
+
     #skills{
-      margin-left:21px;
-    }
-    #skills h1{
-      font-size: 26px;
-    }
-    #skills p{
-      font-size: 17px;
-      line-height: 1.5;
-    }
-    #about{
-      margin-left: 36px;
-    }
-    .about_me_paragraph{
-      width: 114%;
-    }
-    blockquote{
-      font-size: 15px;
-      margin-left: 11px;
-      line-height: 1.5;
-    }
-    #about{
-      margin-left: 33px;
-    }
-    #contact{
-      margin-left: 31px;
+      margin-left: 1px;
       margin-top: -86px;
     }
-    #contact p{
-      display: none;
-    }
-    .project{
-      width: 180px;
-      height: 180px;
-      margin-left: 0px;
-    }
-    .clear{
-      font-size: 16px;
-      margin-left: -90px;
-    }
-    .fa.fa-bars.fa-2x {
-      margin-right: -227px;
-    }
-  }
 
-  /*Older iPhones and Galaxy Devices (3, 4, 5)*/
-  @media screen and (max-width: 320px){
-    #skills{
-      margin-left: 17px;
-    }
-    #skills p{
-      letter-spacing: 1px;
-      line-height: 1.5;
-    }
     #skills h1{
-      font-size: 22px;
+      font-size: 25px;
+      letter-spacing: 4px;
     }
-    .social{
-      margin-top: 78px;
+
+    #skills p{
+      font-size: 20px;
+      line-height: 1.1;
     }
-    .name, .surname{
-      margin-top: 22px;
-      font-size: 39px;
-    }
-    .what, .where{
-      font-size: 16px;
-    }
-    .fa.fa-bars.fa-2x {
-      margin-right: -200px;
-    }
-    .outer_circle{
-      height: 215px;
-      width: 215px;
-    }
-    .circle_logo{
-      width: 195px;
-      height: 195px;
-    }
+
     #about{
-      margin-top: -48px;
-      margin-left: 36px;
+      margin-left: 86px;
+      margin-top: -76px;
     }
-    #contact{
-      margin-top: -109px;
-    }
-    #contact p{
-      display: none;
-    }
-    .project{
+
+    .circle_logo{
       width: 180px;
       height: 180px;
-      margin-left: -12px;
     }
-    .clear{
-      font-size: 16px;
-      margin-left: -90px;
+
+    .outer_circle{
+      width: 200px;
+      height: 200px;
     }
-    .dropdown.show {
-      margin-left: 28px;
-      width: 279px;
+
+    .about_me_paragraph{
+      width: 98%;
+      margin-left: -103px;
     }
-  }
+
+    #contact {
+      margin-left: 13px;
+      margin-top: -70px;
+    }
+
+    .available{
+      display: none;
+    }
+
+    .input, #area{
+      width: 340px;
+    }
+
+}
