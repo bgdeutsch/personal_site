@@ -561,6 +561,152 @@ MEDIA QUERIES
   }
 }
 
+/* ----------- iPad 3 and 4 ----------- */
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 768px)
+  and (max-device-width: 1024px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    #logo{ margin-left: -40px; }
+
+    .name{
+      font-size: 60px;
+      margin-top: 72px;
+     }
+
+    .social {
+      margin-top: 90px;
+      font-size: 49px;
+    }
+
+    .nav-bar {
+      margin-top: 43px;
+      margin-right: 230px;
+      width: 115%;
+    }
+
+    .nav-bar li {
+      font-size: 27px;
+      margin-left: 1.8em;
+    }
+
+    #skills{
+      margin-top: -46px;
+      margin-left: 18px;
+    }
+
+    #skills h1{
+      font-size: 46px;
+    }
+
+    #skills p{
+      font-size: 25px;
+      line-height: 2;
+    }
+
+    .circle_logo{
+      width: 240px;
+      height: 240px;
+    }
+
+    .outer_circle{
+      width: 260px;
+      height: 260px;
+    }
+
+    .about_me_paragraph {
+      width: 91%;
+      margin-left: -526px;
+      margin-top: 281px;
+      float: left;
+    }
+
+    #about {
+      margin-left: 255px;
+      margin-top: 45px;
+      width: 115%;
+    }
+
+    blockquote{ font-size: 30px; }
+
+    #area{ width: 542px; }
+
+    .input {
+      width: 542px;
+      border: 2px solid #4ee7bb;
+      border-radius: 3px;
+      background: none;
+      color: #d3e1e4;
+      padding: 6px;
+      font-size: 30px;
+      line-height: 2;
+      margin: 15px;
+    }
+
+    #contact{
+      margin-left: 18px;
+      margin-top: 43px;
+    }
+
+    .submit {
+      background: none;
+      border: solid 3px #4ee7bb;
+      color: #4ee7bb;
+      width: 159px;
+      height: 46px;
+      margin-top: 50px;
+      margin-left: 1px;
+      float: left;
+      font-size: 27px;
+      margin: 15px;
+    }
+
+    #contact small {
+      color: white;
+      float: left;
+      line-height: 2em;
+      margin-top: 108px;
+      margin-left: 19px;
+      font-size: 21px;
+    }
+
+    .available {
+      line-height: 0.1;
+      color: #f4e9c7;
+      margin-top: -10px;
+      opacity: 0.8;
+      font-size: 24px;
+      letter-spacing: 1px;
+      margin-left: 14px;
+    }
+
+    .project {
+      width: 240px;
+      height: 200px;
+      margin: 41px;
+      float: none;
+      color: #333;
+      font-weight: 400;
+      font-size: 24px;
+    }
+
+    #work{
+      margin-left: 174px;
+    }
+
+    .clear { margin-left: -141px; }
+    
+    .clear:first-of-type {
+      color: #d3e1e4;
+      margin-left: -248px;
+      font-weight: 400;
+    }
+
+}
+
+
+
 /* ----------- iPhone 6 ----------- */
 
 /* Portrait and Landscape */
@@ -642,94 +788,94 @@ MEDIA QUERIES
     }
   }
 
-  /* ----------- iPhone 5 and 5S ----------- */
+/* ----------- iPhone 5 and 5S ----------- */
 
-  /* Portrait and Landscape */
-  @media only screen
-    and (min-device-width: 320px)
-    and (max-device-width: 568px)
-    and (-webkit-min-device-pixel-ratio: 2) {
-      .logo{
-        font-size: 90px;
-      }
-
-      #logo{ margin-left: -26px; }
-
-      #burger{
-        margin-right: -5.5em;
-        margin-top: 15px;
-      }
-
-      .dropdown.show{
-        margin-left: 1px;
-        width: 312px;
-        margin-top: -146px;
-      }
-
-      #home{ width: 81%; }
-
-      .social{ margin-top: 61px; }
-
-      .project{
-        margin: 44px;
-        margin-left: -51px;
-        margin-top: -20px;
-      }
-
-      .clear:first-of-type {
-        color: #d3e1e4;
-        font-weight: 400;
-        font-size: 16px;
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 320px)
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo{
+      font-size: 90px;
     }
 
-      #skills{
-        margin-left: 1px;
-        margin-top: -86px;
-      }
+    #logo{ margin-left: -26px; }
 
-      #skills h1{
-        font-size: 22px;
-        letter-spacing: 3px;
-      }
-
-      #skills p{
-        font-size: 20px;
-        line-height: 1.1;
-      }
-
-      #about{
-        margin-left: 73px;
-        margin-top: -76px;
-      }
-
-      .circle_logo{
-        width: 160px;
-        height: 160px;
-      }
-
-      .outer_circle{
-        width: 180px;
-        height: 180px;
-      }
-
-      .about_me_paragraph{
-        width: 98%;
-        margin-left: -85px;
-      }
-
-      #contact {
-        margin-left: 4px;
-        margin-top: -88px;
-      }
-
-      .available{
-        display: none;
-      }
-
-      .input, #area{
-        width: 315px;
-      }
+    #burger{
+      margin-right: -5.5em;
+      margin-top: 15px;
     }
+
+    .dropdown.show{
+      margin-left: 1px;
+      width: 312px;
+      margin-top: -146px;
+    }
+
+    #home{ width: 81%; }
+
+    .social{ margin-top: 61px; }
+
+    .project{
+      margin: 44px;
+      margin-left: -51px;
+      margin-top: -20px;
+    }
+
+    .clear:first-of-type {
+      color: #d3e1e4;
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    #skills{
+      margin-left: 1px;
+      margin-top: -86px;
+    }
+
+    #skills h1{
+      font-size: 22px;
+      letter-spacing: 3px;
+    }
+
+    #skills p{
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    #about{
+      margin-left: 73px;
+      margin-top: -76px;
+    }
+
+    .circle_logo{
+      width: 160px;
+      height: 160px;
+    }
+
+    .outer_circle{
+      width: 180px;
+      height: 180px;
+    }
+
+    .about_me_paragraph{
+      width: 98%;
+      margin-left: -85px;
+    }
+
+    #contact {
+      margin-left: 4px;
+      margin-top: -88px;
+    }
+
+    .available{
+      display: none;
+    }
+
+    .input, #area{
+      width: 315px;
+    }
+  }
 
     /* ----------- iPhone 6+ ----------- */
 
