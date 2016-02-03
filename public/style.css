@@ -54,7 +54,6 @@ clearfix:after{
   margin-right: -4px;
 }
 
-
 small{
   margin-top: 150px;
   color: #7ee4bb;
@@ -120,8 +119,6 @@ input:focus{
   transition: background-color 0.8s ease;
 }
 
-
-
 .logo:hover{
   background-color: #4ee7bb;
 }
@@ -146,6 +143,7 @@ input:focus{
 .inner-logo a{
   font-weight: 700;
   font-size: 35px;
+  cursor:default;
 }
 
 #main-nav > .nav-bar{
@@ -156,6 +154,7 @@ input:focus{
   padding: 2.35em 1%;
   margin: auto;
   margin-right: -11.5em;
+  margin-top: -3px;
 }
 
 .nav-bar a{
@@ -170,6 +169,53 @@ input:focus{
 .nav-bar a:hover{
   border-bottom: 4px solid #4ee7bb;
   color: #e9e9e9;
+}
+
+#burger{
+  display: none;
+}
+
+.drop-down{
+  display: none;
+  position: absolute;
+  color: #333;
+  width: 242px;
+  height: 190px;
+  padding: 12px 16px;
+  z-index: 3;
+  margin-top: 59px;
+  margin-left: 489px;
+  right: 19px;
+}
+
+.nav-responsive{
+  display: block;
+  background: #e9e9e9;
+  width: 223px;
+  border-radius: 2px;
+  display: block;
+  padding: 0;
+  height: 33%;
+  position: relative;
+  font-size: 24px;
+  border: 1px solid #333;
+  padding-left: 7px;
+  padding-top: 12px;
+  box-shadow: 0px 3px 16px 0px rgba(250,250,250,0.2);
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+
+.nav-responsive a{
+  color: #333;
+}
+
+.nav-responsive:hover{
+  background: #7ee4bb;
+}
+
+.nav-responsive a:hover{
+  color: white;
 }
 
 .intro{
@@ -241,7 +287,6 @@ input:focus{
   text-transform: uppercase;
 }
 
-
 #skills h2, .skills-desc{
   text-align: center;
 }
@@ -260,7 +305,6 @@ input:focus{
   padding: 5em 5%;
   margin-left: 80px;
 }
-
 
 .skills-wrapper h3{
   color: #4ee7bb;
@@ -304,27 +348,211 @@ input:focus{
   max-width: 1500px;
   height: 240px;
   background: #262626;
-}
-
-.social{
-  width: 100%;
-  left: 35%;
-  position: relative;
-  padding-top: 2.2em;
-  padding-bottom: 1.2em;
+  text-align: center;
+  padding-top: 2em;
 }
 
 #footer p{
   text-align: center;
   color: #e9e9e9;
+  padding-top: 1.5em;
 }
 
-.social a{
-  margin-left: 3.5em;
+#footer a{
   color: rgba(78, 231, 187, 0.5);
   transition: all 0.3s ease-in-out;
+  margin: 35px;
 }
 
-.social a:hover{
+#footer a:hover{
   color: #4ee7bb;
+}
+
+/****Media Queries****/
+@media (max-width: 1120px){
+  #main-nav > .nav-bar{
+    margin-right: -9em;
+  }
+}
+
+@media (max-width: 1030px){
+  #main-nav > .nav-bar{
+    margin-right: -6em;
+  }
+  .col-1, .col-2, .col-3{
+    width: 31%;
+  }
+}
+
+@media (max-width: 935px){
+  #main-nav > .nav-bar{
+    margin-right: -3.5em;
+  }
+  .col-1, .col-2, .col-3{
+    margin-left: -8px;
+  }
+}
+
+@media (max-width: 870px){
+  #main-nav > .nav-bar{
+    margin-right: -1.5em;
+    width: 54%;
+  }
+  .nav-bar a{
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 776px){
+  .nav-bar{
+    display: none;
+  }
+  #burger{
+    display: block;
+    color: #4ee7bb;
+    position: relative;
+    float: right;
+    margin: 3px;
+    border: 1px solid;
+    padding: 9px;
+    padding-left: 12px;
+    padding-right: 12px;
+    transition: all 0.3s ease-in-out;
+  }
+  #burger:hover{
+    cursor: pointer;
+    background: #4ee7bb;
+    color: white;
+    border: 1px solid #4ee7bb;
+  }
+  .my-picture{
+    height: 158px;
+    width: 158px;
+  }
+  #about{
+    height: 800px;
+  }
+  .skills-wrapper{
+    width: 104%;
+    margin-left: 46px;
+  }
+}
+
+@media (max-width: 660px){
+  #about{
+    height: 850px;
+  }
+  .skills-wrapper {
+    width: 108%;
+    margin-left: 27px;
+  }
+  .col-2{
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 520px){
+  #about{
+    height: 970px;
+  }
+  #skills{
+    height: 1000px;
+  }
+  .drop-down{
+    right: 15px;
+  }
+  .col-1, .col-2, .col-3{
+    float: none;
+    margin-left: 0;
+  }
+  .skills-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -75px;
+    text-align: center;
+    left: 30%;
+  }
+  .skills-wrapper h3{
+    font-size: 27px;
+  }
+  .col-2 h3{
+    margin-left: -8px;
+  }
+}
+
+@media (max-width: 454px){
+  #about{
+    height: 970px;
+  }
+  .drop-down{
+    right: 13px;
+  }
+}
+
+@media (max-width: 415px){
+  #about{
+    height: 1050px;
+  }
+  .col-2 h3{
+    margin-left: -20px;
+  }
+}
+
+/*iPhone 6*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px){
+  #about{
+    height: 1100px;
+  }
+  .col-2 h3 {
+    margin-left: -29px;
+  }
+  input{
+    width: 150%;
+    margin-left: -52px;
+  }
+  .submit{
+    width: 150%;
+  }
+  .drop-down{
+    right: 10px;
+  }
+}
+
+/*iPhone 5*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px){
+  .logo{
+    margin-left: 8px;
+  }
+  .drop-down{
+    right: 9px;
+  }
+  #about p{
+    font-size: 16px;
+  }
+  .col-2 h3 {
+    margin-left: -33px;
+  }
+  #skills{
+    height: 1040px;
+  }
+  input{
+    width: 161%;
+    margin-left: -52px;
+  }
+  .submit{
+    width: 161%;
+  }
+  #contact{
+    height: 610px;
+  }
+  #footer{
+    height: 275px;
+  }
+  #footer a{
+    margin: 23px;
+  }
 }

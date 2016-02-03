@@ -1,6 +1,5 @@
 $(document).ready(function(){
 
-
   //Google Analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -11,44 +10,56 @@ $(document).ready(function(){
   ga('send', 'pageview');
   // End Google Analytics script.
 
-
   //Scroll to specified div when user clicks anchor tag.
   $('a[href^="#"]').on('click',function (e) {
-  	    e.preventDefault();
+  	  e.preventDefault();
+      var target = this.hash;
+      var $target = $(target);
 
-  	    var target = this.hash;
-  	    var $target = $(target);
+      $('html, body').stop().animate({
+        'scrollTop': $target.offset().top
+        }, 1700, 'swing', function () {
+        window.location.hash = target;
+      });
+    });
 
-  	    $('html, body').stop().animate({
-  	        'scrollTop': $target.offset().top
-  	    }, 1700, 'swing', function () {
-  	        window.location.hash = target;
-  	    });
-  	});
+  //Dropdown Nav menu for responsive design.
+  $('#burger').click(function(event){
+    $('.drop-down').slideToggle(800);
+    event.stopPropagation();
+  });
 
-// Form validations should generally be done server-side,
-// in case user's browser has jS turned off.  Re-factoring coming soon.
-$('.submit').click(function(e){
-  var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  var email = $('[data-rel="email"]').val();
-  var username = $('[data-rel="username"]').val();
-  var message = $('[data-rel="message"]').val();
+  $('html').click(function(){
+    $('.drop-down').slideUp(800);
+  });
 
-  if ( !regex.test(email) ){
-    e.preventDefault();
-    $('.error').text('Plese enter a valid email!');
-    $('.error').css('visibility', 'visible');
-  }
-  else if ( username == '' ){
-    e.preventDefault();
-    $('.error').text('Please enter your name!');
-    $('.error').css('visibility', 'visible');
-  }
-  else if ( message == ''){
-    e.preventDefault();
-    $('.error').text('Please enter a message!');
-    $('.error').css('visibility', 'visible');
-  }
-});
+  $('.responsive-nav').click(function(){
+    $('.drop-down').fadeOut(250);
+  });
+
+  // Form validations should generally be done server-side,
+  // in case user's browser has jS turned off.  Re-factoring coming soon.
+  $('.submit').click(function(e){
+    var regex = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    var email = $('[data-rel="email"]').val();
+    var username = $('[data-rel="username"]').val();
+    var message = $('[data-rel="message"]').val();
+
+    if ( !regex.test(email) ){
+      e.preventDefault();
+      $('.error').text('Plese enter a valid email!');
+      $('.error').css('visibility', 'visible');
+    }
+    else if ( username == '' ){
+      e.preventDefault();
+      $('.error').text('Please enter your name!');
+      $('.error').css('visibility', 'visible');
+    }
+    else if ( message == '' ){
+      e.preventDefault();
+      $('.error').text('Please enter a message!');
+      $('.error').css('visibility', 'visible');
+    }
+  });
 //on document.ready
 });
