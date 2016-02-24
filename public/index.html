@@ -1,127 +1,139 @@
 <!DOCTYPE html>
 <head>
-  <title>Brian Deutsch | Developer</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="public/favicon.ico" type="image/x-icon">
-  <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
-  <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' />
-  <link rel='stylesheet' type='text/css' href='/public/style.css' />
+    <title>Brian Deutsch | Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="public/favicon.ico" type="image/x-icon">
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
+    <link rel='stylesheet' type='text/css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' />
+    <link rel='stylesheet' type='text/css' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css' />
+    <link rel='stylesheet' type='text/css' href='/public/style.css' />
 </head>
 
 <body>
-  <div class='wrapper'>
-  <header id='main-nav'>
-    <div class='logo'>
-      <div class='inner-logo'>
-        <a href='#'>BD</a>
-      </div>
+    <div id='loading'></div>
+    <div class='wrapper'>
+        <header id='main-nav'>
+            <div class='logo'>
+                <div class='inner-logo'>
+                    <a href='#'>BD</a>
+                </div>
+            </div>
+
+            <nav class='nav-bar'>
+                <a href='#skills'>Skills</a>
+                <a href='#about'>About</a>
+                <a href='#contact'>Contact</a>
+            </nav>
+
+            <i class='fa fa-bars fa-3x' id='burger'></i>
+
+            <div class='drop-down'>
+                <div class='nav-responsive'><a href='#skills'>Skills</a></div>
+                <div class='nav-responsive'><a href='#about'>About</a></div>
+                <div class='nav-responsive'><a href='#contact'>Contact</a></div>
+            </div>
+
+            <div class='intro animated bounceInDown'>
+                <h2>Hey, I'm Brian.</h2>
+                <p>Independent web developer, designer, creative problem-solver.</p>
+            </div>
+        </header>
+
+        <!-- Skills div -->
+        <div id='skills' data-target='#skills'>
+            <!-- <h2>&lt;/My Skills&gt;</h2> -->
+            <p class='skills-desc'>I combine these tools to produce creative, flexible solutions for my clients.</p>
+            <hr />
+            <div class='skills-wrapper clearfix'>
+                <div class='col-1'>
+                    <div class='skill-icon'>
+                        <h3>Languages</h3>
+                    </div>
+                    <br />
+                    <p>HTML5</p>
+                    <p>CSS3</p>
+                    <p>JavaScript</p>
+                    <p>Ruby Lang</p>
+                </div>
+                <div class='col-2'>
+                    <div class='skill-icon'>
+                        <h3 id='frameworks'>Frameworks</h3>
+                    </div>
+                    <br />
+                    <p>jQuery</p>
+                    <p>Ruby on Rails</p>
+                    <p>MEAN Stack</p>
+                    <p>Bootstrap</p>
+                    <p>SCSS / LESS</p>
+                </div>
+                <div class='col-3'>
+                    <div class='skill-icon'>
+                        <h3 id='other'>Other</h3>
+                    </div>
+                    <br />
+                    <p>Git / Version control</p>
+                    <p>Responsive Design</p>
+                    <p>MVC Pattern</p>
+                    <p>OOP Fundamentals</p>
+                    <p>SQL Database Management</p>
+                </div>
+            </div>
+            <!-- End skills wrapper div -->
+        </div>
+        <!-- End skills div -->
+
+        <!-- Portfolio Div. -->
+        <!-- <div class='portfolio' data-target='#portfolio'>
+            <ul class='project-photos'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div> -->
+        <!-- End Portfolio Div. -->
+
+        <!-- About div -->
+        <div id='about'>
+            <div class='my-picture'></div>
+            <h2>Thanks for stopping by!</h2>
+            <br />
+            <hr />
+            <p>I'm Brian, a full-stack web developer based in wonderful Long Beach, NY.  I've been interested in web design since I was fourteen, when I built my first 'blog' on Geocities.  In August of 2015, I embarked on an intensive three-month web development course at General Assembly where my chops for design, front-end coding, and back-end scripting were honed.  I am currently accepting freelance projects, so let me hear what you've got!</p>
+            <br />
+            <p>When I'm not coding, I can be found at a local venue taking in live music, in the right-field bleachers at Yankee Stadium, dabbling in photography, or planning my next road trip.</p>
+        </div>
+        <!-- End About div -->
+
+        <!-- Contact div -->
+        <div id='contact'>
+            <div class='contact-wrapper'>
+                <h2>Drop a line.</h2>
+                <p>Whether you have a work inquiry, or just like to chat about craft beer, guitars, or sports - I'd love to hear from you!</p>
+                <form action='/form' method='POST' id='contact_form'>
+                    <div class='error'></div>
+                    <input type='text' class='input' name='username' data-rel='username' placeholder='Your name*' /><br>
+                    <input type='email' class='input' name='email' data-rel='email' placeholder='E-mail*' /><br>
+                    <textarea class='input' name='message' data-rel='message' placeholder='Your message here*' id='area' /></textarea><br />
+                    <input type='submit' class='submit' name='submit' />&nbsp;&nbsp;
+                </form>
+            </div>
+        </div>
+        <!-- End Contact div -->
+
+        <!-- Footer -->
+        <div id='footer'>
+            <a href='http://www.github.com/bgdeutsch'><i class="fa fa-github-square fa-3x"></i></a>
+            <a href='http://www.linkedin.com/in/briandeutschdev'><i class="fa fa-linkedin-square fa-3x"></i></a>
+            <a href='http://www.twitter.com/bdutchy'><i class="fa fa-twitter-square fa-3x"></i></a>
+            <p><i class="fa fa-copyright fa-lg"></i>Brian Deutsch, 2016.  All rights reserved.</p>
+            <p>Made in Long Beach, NY</p>
+        </div>
+        <!-- End footer div -->
     </div>
+    <!-- End wrapper div -->
 
-    <nav class='nav-bar'>
-      <a href='#skills'>Skills</a>
-      <a href='#about'>About</a>
-      <a href='#contact'>Contact</a>
-    </nav>
-
-    <i class='fa fa-bars fa-3x' id='burger'></i>
-
-    <div class='drop-down'>
-      <div class='nav-responsive'><a href='#skills'>Skills</a></div>
-      <div class='nav-responsive'><a href='#about'>About</a></div>
-      <div class='nav-responsive'><a href='#contact'>Contact</a></div>
-    </div>
-
-
-    <div class='intro'>
-      <h2>Hey, I'm Brian.</h2>
-      <p>Independent web developer, designer, creative problem-solver.</p>
-      <a href='#main-nav'><i class="fa fa-long-arrow-up fa-2x" id='up-top'></i></a>
-      <small>Top</small>
-    </div>
-
-
-  </header>
-
-  <!-- About div -->
-  <div id='about'>
-    <div class='my-picture'></div>
-    <h2>Thanks for stopping by!</h2>
-    <br />
-    <hr />
-    <p>I'm Brian, a full-stack web developer based in wonderful Long Beach, NY.  I've been interested in web design since I was fourteen, when I built my first 'blog' on Geocities.  In August of 2015, I embarked on an intensive three-month web development course at General Assembly where my chops for design, front-end coding, and back-end scripting were honed.  I am currently accepting freelance projects, so let me hear what you've got!</p>
-    <br />
-    <p>When I'm not coding, I can be found at a local venue taking in live music, in the right-field bleachers at Yankee Stadium, dabbling in photography, or planning my next road trip.</p>
-  </div>
-  <!-- End About div -->
-
-  <!-- Skills div -->
-  <div id='skills' data-target='#skills'>
-    <h2>&lt;/My Skills&gt;</h2>
-    <p class='skills-desc'>I combine these tools to produce creative, flexible solutions for my clients.</p>
-    <hr />
-    <div class='skills-wrapper clearfix'>
-      <div class='col-1'>
-        <h3>Code</h3>
-        <p>HTML5</p>
-        <p>CSS3</p>
-        <p>JavaScript</p>
-        <p>Ruby Lang</p>
-      </div>
-      <div class='col-2'>
-        <h3>Frameworks</h3>
-        <p>jQuery</p>
-        <p>Rails</p>
-        <p>MEAN Stack</p>
-        <p>Bootstrap</p>
-        <p>SASS</p>
-      </div>
-      <div class='col-3'>
-        <h3>Other</h3>
-        <p>Git / Version control</p>
-        <p>Responsive Design</p>
-        <p>MVC Pattern</p>
-        <p>OOP Fundamentals</p>
-        <p>SQL Database Management</p>
-      </div>
-    </div>
-    <!-- End skills wrapper div -->
-  </div>
-  <!-- End skills div -->
-
-  <!-- Contact div -->
-  <div id='contact'>
-    <div class='contact-wrapper'>
-      <h2>Let's work together!</h2>
-      <form action='/form' method='POST' id='contact_form'>
-
-        <div class='error'></div>
-
-        <input type='text' class='input' name='username' data-rel='username' placeholder='Your name*' /><br>
-
-        <input type='email' class='input' name='email' data-rel='email' placeholder='E-mail*' /><br>
-
-        <input type='textarea' class='input' name='message' data-rel='message' placeholder='Your message here*' id='area' /></br>
-
-        <input type='submit' class='submit' name='submit' />&nbsp;&nbsp;
-
-      </form>
-    </div>
-  </div>
-  <!-- End Contact div -->
-
-  <!-- Footer -->
-  <div id='footer'>
-    <a href='http://www.github.com/bgdeutsch'><i class="fa fa-github-square fa-3x"></i></a>
-    <a href='http://www.linkedin.com/in/briandeutschdev'><i class="fa fa-linkedin-square fa-3x"></i></a>
-    <a href='http://www.twitter.com/bdutchy'><i class="fa fa-twitter-square fa-3x"></i></a>
-    <p><i class="fa fa-copyright fa-lg"></i>Brian Deutsch, 2016.  All rights reserved.</p>
-    <p>Made in Long Beach, NY</p>
-  </div>
-  <!-- End footer div -->
-  </div>
-  <!-- End wrapper div -->
-
-  <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
-  <script src='/public/script.js'></script>
+    <script src='https://code.jquery.com/jquery-2.2.0.min.js'></script>
+    <script src='/public/script.js'></script>
 </body>

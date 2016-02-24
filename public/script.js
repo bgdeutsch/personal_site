@@ -1,41 +1,49 @@
+$(window).load(function(){
+    $('#loading').fadeOut(2000);
+});
+
 $(document).ready(function(){
 
-  //Google Analytics
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+//Google Analytics script.
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-72601012-1', 'auto');
-  ga('send', 'pageview');
-  // End Google Analytics script.
+    ga('create', 'UA-72601012-1', 'auto');
+    ga('send', 'pageview');
+// End Google Analytics script.
 
-  //Scroll to specified div when user clicks anchor tag.
-  $('a[href^="#"]').on('click',function (e) {
-  	  e.preventDefault();
-      var target = this.hash;
-      var $target = $(target);
+//Scroll to specified div when user clicks anchor tag.
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+        var target = this.hash;
+        var $target = $(target);
 
-      $('*').stop().animate({
-        'scrollTop': $target.offset().top
-        }, 1700, 'swing', function () {
-        window.location.hash = target;
-      });
+        $('*').stop().animate({
+            'scrollTop': $target.offset().top
+            }, 1200, 'swing', function () {
+                window.location.hash = target;
+        });
     });
 
   //Dropdown Nav menu for responsive design.
   $('#burger').click(function(event){
-    $('.drop-down').slideToggle(800);
-    event.stopPropagation();
+      $('.drop-down').slideToggle(800);
+      event.stopPropagation();
   });
 
+  //Close the drop down menu automatically on user click event.
   $('html').click(function(){
-    $('.drop-down').slideUp(800);
+      $('.drop-down').slideUp(800);
   });
 
+  // Fade out the nav bar when user clicks a link inside the dropdown.
   $('.responsive-nav').click(function(){
-    $('.drop-down').fadeOut(250);
+      $('.drop-down').fadeOut(250);
   });
+
+  $(document).on('scroll',function(){ alert('Event Fired'); })
 
   // Form validations should generally be done server-side,
   // in case user's browser has jS turned off.  Re-factoring coming soon.
