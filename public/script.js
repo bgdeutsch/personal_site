@@ -1,5 +1,5 @@
 $(window).load(function(){
-    $('#loading').fadeOut(2000);
+    $('#loading').fadeOut(2500);
 });
 
 $(document).ready(function(){
@@ -42,8 +42,6 @@ $(document).ready(function(){
   $('.responsive-nav').click(function(){
       $('.drop-down').fadeOut(250);
   });
-
-  $(document).on('scroll',function(){ alert('Event Fired'); })
 
   // Form validations should generally be done server-side,
   // in case user's browser has jS turned off.  Re-factoring coming soon.
